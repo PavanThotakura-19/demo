@@ -2,13 +2,18 @@
 <html>
 <body>
 
-<h2>variables</h2>
+<h2>datatypes</h2>
+<p id="demo"></p>
 
 
 
 <script>
-    var x=5, y=6;
-console.log(x + y);
+    var array=[1,2,3,4,5];
+    array[3]=""; 
+    typeof array[3];
+
+    document.getElementById("demo").innerHTML=
+    "The type is:" + typeof array[3];
 </script>
 
 </body>
