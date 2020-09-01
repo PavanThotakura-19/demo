@@ -1,0 +1,44 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<style>
+
+
+
+table,th,td{
+  border: 1px solid black;
+  border-collapse: collapse;
+  text-align: center;
+  padding: 8px;
+}
+
+
+</style>
+<title>My Marks</title>
+</head>
+<body>
+<h1 align="center">Previous Semester Marks</h1>
+<table>
+<tr><th>Subject Name</th><th>Grade Points</th></tr>
+<tr><td>MMS</td><td class="avg">9</td></tr>
+<tr><td>TD</td><td class="avg">10</td></tr>
+<tr><td>SOM</td><td class="avg">9</td></tr>
+<tr><td>DOM</td><td class="avg">10</td></tr>
+<tr><td>DMM</td><td class="avg">10</td></tr>
+<tr><td>ED</td><td class="avg">7</td ></tr>
+<tr><td>average</td><td id="average"></td></tr>
+</table>
+<script>
+  var average=document.getElementsByClassName("avg");
+  var sum=0;
+ 
+  for (var i =0;i<average.length;i++){
+    
+    sum+=parseInt(average[i].innerHTML);
+  }
+  var div=average.length;
+  var avg=sum/div;
+  document.getElementById("average").innerHTML = avg;
+  </script>
+</body>
+</html>
