@@ -1,4 +1,4 @@
-﻿<!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html>
 <head>
 <style>
@@ -29,16 +29,21 @@ table,th,td{
 <tr><td>average</td><td id="average"></td></tr>
 </table>
 <script>
-  var average=document.getElementsByClassName("avg");
-  var sum=0;
- 
-  for (var i =0;i<average.length;i++){
-    
-    sum+=parseInt(average[i].innerHTML);
-  }
+  
+  function aver(sum,i){
+    var average=document.getElementsByClassName("avg");
+    var sum;
+      for (var i;i<average.length;i++){
+        
+        sum+=parseInt(average[i].innerHTML);
+      }
   var div=average.length;
   var avg=sum/div;
-  document.getElementById("average").innerHTML = avg;
+  return avg;
+  }
+  
+ document.getElementById("average").innerHTML = aver(0,0);
+
   </script>
 </body>
 </html>
