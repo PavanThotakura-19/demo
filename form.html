@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>registeration form</title>
+<style>
+
+.btn {
+  background-color: red;
+}
+
+.btn:visited {
+  background-color: green;
+}
+
+.btn:hover {
+  background-color: hotpink;
+}
+
+.btn:active {
+  background-color: blue;
+}
+</style>
+</head>
+<body>
+<form align="center" onsubmit="return validate()" name="myForm">
+First name : <input type ="text" name="fname" placeholder="First name" ><br><br>
+Phone number : <input type="tel" name="Phone number" placeholder="Phone number"><br><br>
+Choice  of choice : <input type="radio" name="choice">Bachelors
+	              <input type="radio" name="choice">Masters<br><br>
+Subject interests : <input type="checkbox" name="interest">CSE
+                                <input type="checkbox" name="interest"> ECE
+                                <input type="checkbox" name="interest">EEE
+                                <input type="checkbox" name="interest">MECH
+                                <input type="checkbox" name="interest">CIVIL<br><br>
+
+                                 <center><p><input type="submit" name="submit"></p><center>
+<br><br>
+                            <center><p><type="submit" name="submit"  value="register"></p><center>
+                           
+</form>
+<script>
+  function validate(){
+    var x = document.forms["myForm"]["fname"].value;
+    var patt=/[a-zA-Z]+$/;
+    if(x.match(patt)){
+      return true;
+    }
+    else{
+      alert("name not valid")
+     return false;
+      }
+   
+  }
+</script>
+</body>
+</html>
